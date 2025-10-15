@@ -321,3 +321,79 @@ form .btn2{
     margin-top: -40px;
     display: block;
 }
+
+/* ---------------Mobile--------------- */
+/* Base tweaks */
+:root{
+    --container-pad: clamp(12px, 4vw, 10%);
+  }
+  .container{ padding: 10px var(--container-pad); }
+  
+  /* Fluid type */
+  .header-content h1{ font-size: clamp(28px, 6vw, 55px); }
+  .header-content{ font-size: clamp(14px, 2.4vw, 20px); margin-top: clamp(24px, 8vh, 10%); }
+  
+  /* Nav layout */
+  nav{ display:flex; align-items:center; gap:16px; padding: 16px var(--container-pad); }
+  nav ul{ display:flex; gap: clamp(12px, 2.5vw, 24px); margin-left:auto; }
+  .nav-toggle{ display:none; background:transparent; border:0; color:#fff; font-size:28px; cursor:pointer; }
+  
+  /* Images & grids */
+  img{ max-width:100%; height:auto; }
+  .services-list, .work-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  
+  /* About columns */
+  .row{ display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+  .about-col-1, .about-col-2{ flex: 1 1 420px; }
+  
+  /* Buttons tap size */
+  .btn, .btn.btn2{ min-height:44px; }
+  
+  /* --- Breakpoints --- */
+  
+  /* ≤ 1024px: slightly smaller header area */
+  @media (max-width:1024px){
+    #header{ height: 70vh; }
+  }
+  
+  /* ≤ 768px: hamburger, stacked layout, larger tap targets */
+  @media (max-width:768px){
+    /* Header height */
+    #header{ height: 60vh; }
+  
+    /* Nav → hamburger */
+    .nav-toggle{ display:block; }
+    nav ul{
+      position:absolute; right:0; top:64px; /* below nav bar */
+      background: rgba(0,0,0,0.85);
+      border-left: 1px solid rgba(255,255,255,.08);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      padding:14px 18px;
+      flex-direction:column;
+      gap:12px;
+      transform: translateY(-12px);
+      opacity:0; pointer-events:none;
+      transition: opacity .2s ease, transform .2s ease;
+      z-index: 20;
+    }
+    nav ul.is-open{
+      transform: translateY(0);
+      opacity:1; pointer-events:auto;
+    }
+  
+    .about-col-1, .about-col-2{ flex-basis:100%; }
+    .tab-links{ margin: 16px 24px 0 0; }
+  }
+  
+  /* ≤ 480px: compact spacing */
+  @media (max-width:480px){
+    .header-content{ margin-top: 24px; padding-left: 0; }
+    .sub-title{ font-size: 40px; }
+    .services-list, .work-list{ gap:16px; }
+    nav{ padding: 12px var(--container-pad); }
+  }
+  
