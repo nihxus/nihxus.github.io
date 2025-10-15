@@ -400,4 +400,24 @@ form .btn2{
   @media (prefers-reduced-motion: reduce){
     * { animation: none !important; transition: none !important; }
   }
+
+  /* Make the "About me" photo scale nicely on all screens */
+.about-col-1 img{
+    width: clamp(180px, 28vw, 340px); /* min, preferred, max */
+    height: auto;
+    border-radius: 15px; /* keep style */
+    display: block;
+  }
+  
+  /* On laptops/desktops, keep the image column from stretching too wide */
+  @media (min-width: 992px){
+    .about-col-1{ 
+      flex: 0 0 360px;   /* lock a comfortable column width */
+      max-width: 360px;
+      align-self: flex-start; /* avoid awkward vertical stretching */
+    }
+    .about-col-2{
+      flex: 1;           /* let the text take the remaining space */
+    }
+  }
   
