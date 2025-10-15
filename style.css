@@ -396,4 +396,8 @@ form .btn2{
     .services-list, .work-list{ gap:16px; }
     nav{ padding: 12px var(--container-pad); }
   }
+
+  @media (prefers-reduced-motion: reduce){
+    * { animation: none !important; transition: none !important; }
+  }
   
