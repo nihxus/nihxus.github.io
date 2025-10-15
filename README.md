@@ -44,11 +44,11 @@ Currently:
 - **Software Tester — FAA (2025–Present)**  
   Validating and documenting testing for internal FAA software modules, ensuring compliance and reliability.
 
-- **Full-Stack Developer — Intentional Interventions (2024–2025)**  
-  Built RESTful APIs and Flask frontends with AWS integration; improved healthcare data synchronization by 35%.
-
 - **Cybersecurity Contractor — Emerald Lock Consulting (2025-Present)**  
   Automated cross-platform log analysis and detection workflows using Python, Bash, and PowerShell.
+
+- **Full-Stack Developer — Intentional Interventions (2024–2025)**  
+  Built RESTful APIs and Flask frontends with AWS integration; improved healthcare data synchronization by 35%.
 
 - **Data Analyst Intern — Intel Corporation (2023–2024)**  
   Automated ETL pipelines and developed Tableau dashboards reducing manual reporting by 20+ hours monthly.
