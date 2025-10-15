@@ -59,7 +59,6 @@ Currently:
 ## 🧩 Education
 
 **B.S. Computer Science**, Rowan University — *Minor: Cybersecurity*  
-**A.S. Computer Science**, Rowan College of Burlington County  
 
 **Relevant Coursework:**  
 Software Engineering I · Cybersecurity Principles · Database Systems · Computer Networks · Data Structures ·  
