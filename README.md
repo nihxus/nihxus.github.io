@@ -48,7 +48,7 @@ Currently:
 - **Full-Stack Developer — Intentional Interventions (2024–2025)**  
   Built RESTful APIs and Flask frontends with AWS integration; improved healthcare data synchronization by 35%.
 
-- **Cybersecurity Contractor — Emerald Lock Consulting (2025)**  
+- **Cybersecurity Contractor — Emerald Lock Consulting (2025-Present)**  
   Automated cross-platform log analysis and detection workflows using Python, Bash, and PowerShell.
 
 - **Data Analyst Intern — Intel Corporation (2023–2024)**  
