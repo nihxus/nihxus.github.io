@@ -36,7 +36,6 @@ Currently:
 **Cybersecurity:** Wireshark, Kali Linux, pfSense, Cisco, Threat Detection, Endpoint Hardening  
 **Databases:** MySQL, PostgreSQL, MongoDB  
 **Concepts:** SDLC, Agile/Scrum, Secure Coding, Network Defense  
-**Certifications:** CompTIA Network+ (2025)
 
 ---
 
