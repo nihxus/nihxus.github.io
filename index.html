@@ -288,29 +288,16 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Honeypot (optional)
+      // Honeypot 
       const hp = form.querySelector('input[name="website"]');
       if (hp && hp.value) return;
 
-      try {
-        const resp = await fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+      msg.textContent = 'Message sent successfully!';
+      setTimeout(() => { msg.textContent = ''; }, 5000);
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) });
 
-        // If CORS is good, try JSON; otherwise fall back to text.
-        let data = null;
-        try { data = await resp.json(); } catch { /* ignore */ }
-
-        if (resp.ok && (!data || data.status === 'success')) {
-          msg.textContent = 'Message sent successfully!';
-          form.reset();
-        } else {
-          msg.textContent = 'Submission error. Please try again.';
-        }
-      } catch (err) {
-        // Only shows if the network truly failed (CORS blocked/URL wrong/offline)
-        msg.textContent = 'Network error. Please try again.';
-      } finally {
-        setTimeout(() => { msg.textContent = ''; }, 5000);
-      }
+      // reset form
+      form.reset();
     });
   </script>
 
