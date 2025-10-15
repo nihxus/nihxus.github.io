@@ -1,186 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv=""X-UA-Compatible"" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antonio Rosado | Full-Stack Dev</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/857594720f.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="" X-UA-Compatible"" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antonio Rosado | Full-Stack Dev</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/857594720f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <!--------------- Header --------------->
-    <div id="header">
-        <div id="vanta-bg"></div> <!-- Vanta.js background target -->
-        <div class="container">
-            <nav>
-              <!-- Mobile optimization-->
-              <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <i class="fa-solid fa-bars"></i>
-              </button>              
-                <!-- Navigation -->
-                <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-content">
-                <p>Full-Stack Dev | Cybersecurity</p>
-                <h1>Hi, I'm <span>Antonio</span> Rosado<br> from New Jersey</h1>
-            </div>
-        </div>
-    </div>
-
-<!---------------About--------------->
-<div id="about">
+  <!--------------- Header --------------->
+  <div id="header">
+    <div id="vanta-bg"></div> <!-- Vanta.js background target -->
     <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/me.png" alt="">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>I'm a Full-Stack Developer with 2 years of experience building secure applications,
-                    APIs, and data automation systems. My background combines backend architecture,
-                    cloud deployment, and cybersecurity. I’ve deployed RESTful APIs, automated
-                    ETL pipelines, and designed dashboards that streamline workflows and
-                    enhance user experience.
-                    <br><br>
-                    I’m passionate about creating efficient, reliable systems and exploring DevOps
-                    automation, cloud architecture, and data integrity. Whether building backend
-                    logic or refining UI design, I focus on thoughtful design, maintainable code,
-                    and measurable impact.</p>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Programming & Scripting</span><br>
-                            Python, Java, Rust, Go, C, C++, JS, TS, SQL, HTML, CSS, Bash, PowerShell
-                          </li>
-                      
-                          <li><span>Frameworks & Tools</span><br>
-                            Flask, Django, React, Bootstrap, Node.js, Git, Docker, AWS (EC2, RDS, S3)
-                          </li>
-                      
-                          <li><span>Cybersecurity & Networking</span><br>
-                            Wireshark, Kali Linux, pfSense, Cisco, Active Directory, Endpoint Hardening, Threat Detection, Incident Response, Packet Analysis
-                          </li>
-                      
-                          <li><span>Automation & Cloud</span><br>
-                            REST API Development, DevOps Pipelines, Log Parsing Automation, Cloud Infrastructure Management (AWS), Continuous Integration
-                          </li>
-                      
-                          <li><span>Databases & Data Analytics</span><br>
-                            MySQL, PostgreSQL, MongoDB, SQLAlchemy, Data Pipelines, ETL Automation, Tableau Visualization
-                          </li>
-                      
-                          <li><span>Operating Systems</span><br>
-                            Linux (Ubuntu, Debian), Windows Server Administration, macOS
-                          </li>
-                      
-                          <li><span>Concepts & Methodologies</span><br>
-                            Software Development Life Cycle (SDLC), Agile/Scrum, Secure Coding Practices, Penetration Testing Fundamentals, Network Defense
-                          </li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                      <li>
-                        <span>Oct 2025 – Present</span><br>
-                        <b>Software Tester | Federal Aviation Administration (FAA)</b><br>
-                        Conduct validation, regression, and documentation testing across FAA software systems, collaborating with developers to maintain compliance, functionality, and safety standards.
-                      </li>
-                  
-                      <li>
-                        <span>Feb 2025 – Present</span><br>
-                        <b>Cybersecurity Contractor | Emerald Lock Consulting LLC</b><br>
-                        Automated log monitoring and cross-platform security workflows using Python, PowerShell, and Bash, reducing false positives and improving anomaly detection response times by 30%.
-                      </li>
-
-                      <li>
-                        <span>Feb 2024 – Sept 2025</span><br>
-                        <b>Full-Stack Developer | Intentional Interventions</b><br>
-                        Designed and deployed RESTful APIs and Flask-based healthcare modules with AWS integration, improving data sync efficiency and backend reliability by 35%.
-                      </li>
-                  
-                      <li>
-                        <span>Oct 2023 – May 2024</span><br>
-                        <b>Data Analyst Intern | Intel Corporation</b><br>
-                        Automated ETL pipelines and built real-time Tableau dashboards for sustainability KPIs, reducing reporting delays by 25% across five campuses.
-                      </li>
-                    </ul>
-                  </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                      <li><span>2025</span><br>
-                        <b>B.S. Computer Science – Rowan University</b><br>
-                        • Minor in Cybersecurity<br>
-                        • Full scholarship recipient<br>
-                        • Dean’s List (2 consecutive years)<br>
-                      </li>
-                    </ul>
-                  
-                    <h3 style="margin-top:10px; color:#00d9ff;">Relevant Coursework</h3>
-                    <ul style="list-style-type: none; margin-left: 0;">
-                      <li>• Software Engineering I</li>
-                      <li>• Computer Networks</li>
-                      <li>• Cybersecurity: Fundamentals, Principles, and Applications</li>
-                      <li>• Database Systems: Theory & Programming</li>
-                      <li>• Web and Text Mining</li>
-                      <li>• Data Structures and Algorithms</li>
-                      <li>• Operating Systems</li>
-                      <li>• Embedded Systems Programming</li>
-                      <li>• Programming Languages</li>
-                      <li>• Computer Organization</li>
-                      <li>• Probability & Statistical Inference for Computer Systems</li>
-                    </ul>
-                  </div>
-            </div>
-        </div>
+      <nav>
+        <!-- Mobile optimization-->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- Navigation -->
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-content">
+        <p>Full-Stack Dev | Cybersecurity</p>
+        <h1>Hi, I'm <span>Antonio</span> Rosado<br> from New Jersey</h1>
+      </div>
     </div>
-</div>
+  </div>
 
-<!---------------Services--------------->
-<div id="services">
+  <!---------------About--------------->
+  <div id="about">
     <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Backend & API Development</h2>
-                <p>
-                    Building secure, scalable APIs and backend systems using Python (Flask/Django) and AWS infrastructure.
-                    I focus on performance, maintainability, and automation to support complex data-driven workflows.
-                </p>
-            </div>
-            <div>
-                <i class="fa-solid fa-crop-simple"></i>
-                <h2>Cloud Automation & DevOps</h2>
-                <p>
-                    Deploying and managing cloud environments using AWS (EC2, RDS, S3) and Docker.
-                    Implementing CI/CD practices and automating system monitoring and reporting pipelines.
-                </p>
-            </div>
-            <div>
-                <i class="fa-solid fa-shield-halved"></i>
-                <h2>Cybersecurity Integration</h2>
-                <p>
-                    Developing scripts and automated workflows to detect anomalies,
-                    enforce compliance, and enhance cross-platform endpoint security visibility.
-                </p>
-            </div>
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/me.png" alt="">
         </div>
-    </div>
-</div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>I'm a Full-Stack Developer with 2 years of experience building secure applications,
+            APIs, and data automation systems. My background combines backend architecture,
+            cloud deployment, and cybersecurity. I’ve deployed RESTful APIs, automated
+            ETL pipelines, and designed dashboards that streamline workflows and
+            enhance user experience.
+            <br><br>
+            I’m passionate about creating efficient, reliable systems and exploring DevOps
+            automation, cloud architecture, and data integrity. Whether building backend
+            logic or refining UI design, I focus on thoughtful design, maintainable code,
+            and measurable impact.
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Programming & Scripting</span><br>
+                Python, Java, Rust, Go, C, C++, JS, TS, SQL, HTML, CSS, Bash, PowerShell
+              </li>
 
-<!--------------- Portfolio --------------->
-<div id="portfolio">
+              <li><span>Frameworks & Tools</span><br>
+                Flask, Django, React, Bootstrap, Node.js, Git, Docker, AWS (EC2, RDS, S3)
+              </li>
+
+              <li><span>Cybersecurity & Networking</span><br>
+                Wireshark, Kali Linux, pfSense, Cisco, Active Directory, Endpoint Hardening, Threat Detection, Incident
+                Response, Packet Analysis
+              </li>
+
+              <li><span>Automation & Cloud</span><br>
+                REST API Development, DevOps Pipelines, Log Parsing Automation, Cloud Infrastructure Management (AWS),
+                Continuous Integration
+              </li>
+
+              <li><span>Databases & Data Analytics</span><br>
+                MySQL, PostgreSQL, MongoDB, SQLAlchemy, Data Pipelines, ETL Automation, Tableau Visualization
+              </li>
+
+              <li><span>Operating Systems</span><br>
+                Linux (Ubuntu, Debian), Windows Server Administration, macOS
+              </li>
+
+              <li><span>Concepts & Methodologies</span><br>
+                Software Development Life Cycle (SDLC), Agile/Scrum, Secure Coding Practices, Penetration Testing
+                Fundamentals, Network Defense
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span>Oct 2025 – Present</span><br>
+                <b>Software Tester | Federal Aviation Administration (FAA)</b><br>
+                Conduct validation, regression, and documentation testing across FAA software systems, collaborating
+                with developers to maintain compliance, functionality, and safety standards.
+              </li>
+
+              <li>
+                <span>Feb 2025 – Present</span><br>
+                <b>Cybersecurity Contractor | Emerald Lock Consulting LLC</b><br>
+                Automated log monitoring and cross-platform security workflows using Python, PowerShell, and Bash,
+                reducing false positives and improving anomaly detection response times by 30%.
+              </li>
+
+              <li>
+                <span>Feb 2024 – Sept 2025</span><br>
+                <b>Full-Stack Developer | Intentional Interventions</b><br>
+                Designed and deployed RESTful APIs and Flask-based healthcare modules with AWS integration, improving
+                data sync efficiency and backend reliability by 35%.
+              </li>
+
+              <li>
+                <span>Oct 2023 – May 2024</span><br>
+                <b>Data Analyst Intern | Intel Corporation</b><br>
+                Automated ETL pipelines and built real-time Tableau dashboards for sustainability KPIs, reducing
+                reporting delays by 25% across five campuses.
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2025</span><br>
+                <b>B.S. Computer Science – Rowan University</b><br>
+                • Minor in Cybersecurity<br>
+                • Full scholarship recipient<br>
+                • Dean’s List (2 consecutive years)<br>
+              </li>
+            </ul>
+
+            <h3 style="margin-top:10px; color:#00d9ff;">Relevant Coursework</h3>
+            <ul style="list-style-type: none; margin-left: 0;">
+              <li>• Software Engineering I</li>
+              <li>• Computer Networks</li>
+              <li>• Cybersecurity: Fundamentals, Principles, and Applications</li>
+              <li>• Database Systems: Theory & Programming</li>
+              <li>• Web and Text Mining</li>
+              <li>• Data Structures and Algorithms</li>
+              <li>• Operating Systems</li>
+              <li>• Embedded Systems Programming</li>
+              <li>• Programming Languages</li>
+              <li>• Computer Organization</li>
+              <li>• Probability & Statistical Inference for Computer Systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!---------------Services--------------->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Backend & API Development</h2>
+          <p>
+            Building secure, scalable APIs and backend systems using Python (Flask/Django) and AWS infrastructure.
+            I focus on performance, maintainability, and automation to support complex data-driven workflows.
+          </p>
+        </div>
+        <div>
+          <i class="fa-solid fa-crop-simple"></i>
+          <h2>Cloud Automation & DevOps</h2>
+          <p>
+            Deploying and managing cloud environments using AWS (EC2, RDS, S3) and Docker.
+            Implementing CI/CD practices and automating system monitoring and reporting pipelines.
+          </p>
+        </div>
+        <div>
+          <i class="fa-solid fa-shield-halved"></i>
+          <h2>Cybersecurity Integration</h2>
+          <p>
+            Developing scripts and automated workflows to detect anomalies,
+            enforce compliance, and enhance cross-platform endpoint security visibility.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--------------- Portfolio --------------->
+  <div id="portfolio">
     <div class="container">
       <h1 class="sub-title">Highlighted Projects</h1>
       <div class="work-list">
@@ -201,142 +211,150 @@
             <h3>Stock Disclosure Monitor</h3>
             <p>Directed backend implementation for automated monitoring of 50K+ congressional trades.
               Flask app with real-time dashboards and data integrity validation.</p>
-            <a href="https://github.com/nihxus/Owlgorithmic-Traders"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <a href="https://github.com/nihxus/Owlgorithmic-Traders"><i
+                class="fa-solid fa-up-right-from-square"></i></a>
           </div>
         </div>
 
         <div class="work">
-        <img src="images/npm.png" alt="NPM Dependency Inspector">
-        <div class="layer">
-          <h3>NPM Dependency Inspector</h3>
-          <p>
-            A React + TypeScript single-page app that fetches live metadata from NPM and displays a **scorecard**:
-            license, version, dependency count, weekly downloads, last publish date, and more.
-          </p>
-          <a href="https://github.com/nihxus/npm-dependency-inspector"><i class="fa-solid fa-up-right-from-square"></i></a>
+          <img src="images/npm.png" alt="NPM Dependency Inspector">
+          <div class="layer">
+            <h3>NPM Dependency Inspector</h3>
+            <p>
+              A React + TypeScript single-page app that fetches live metadata from NPM and displays a **scorecard**:
+              license, version, dependency count, weekly downloads, last publish date, and more.
+            </p>
+            <a href="https://github.com/nihxus/npm-dependency-inspector"><i
+                class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <a href="https://github.com/nihxus" class="btn">See More on GitHub</a>
+    </div>
+  </div>
+
+
+  <!---------------Contact--------------->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i>cs.antonio.rosado@gmail.com</p>
+          <p><i class="fa-solid fa-square-phone"></i>609-515-7222</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/antonio-rosado-75600a202/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/nihxus"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <a href="resume.pdf" download class="btn btn2">Download Resume</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <!-- Invisible anti-spam honeypot field -->
+            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
         </div>
       </div>
-
     </div>
-    <a href="https://github.com/nihxus" class="btn">See More on GitHub</a>
   </div>
-</div>
 
-
-<!---------------Contact--------------->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>cs.antonio.rosado@gmail.com</p>
-                <p><i class="fa-solid fa-square-phone"></i>609-515-7222</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/antonio-rosado-75600a202/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/nihxus"><i class="fa-brands fa-github"></i></a>
-                </div>
-                <a href="resume.pdf" download class="btn btn2">Download Resume</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                  <!-- Invisible anti-spam honeypot field -->
-                    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
+  <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbx9acdaRNcr300nBUc53S4kWr0iur6YYG0ZhdyPtXWLgAkLycUjO1a-FiPHz27ij-FJ/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg")
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    // Honeypot (anti-spam)
-    const honeypot = form.querySelector('input[name="website"]');
-    if (honeypot && honeypot.value) return;
-
-    try {
-      const resp = await fetch(scriptURL, { method: 'POST', body: new FormData(form) });
-      const data = await resp.json().catch(() => ({}));
-      if (resp.ok && data.status === 'success') {
-        msg.innerHTML = "Message sent successfully!";
-        form.reset();
-      } else {
-        msg.innerHTML = "Submission error. Please try again.";
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
       }
-      setTimeout(() => msg.innerHTML = "", 5000);
-    } catch (err) {
-      msg.innerHTML = "Network error. Please try again.";
-      setTimeout(() => msg.innerHTML = "", 5000);
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
     }
-  });
-</script>
+  </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx9acdaRNcr300nBUc53S4kWr0iur6YYG0ZhdyPtXWLgAkLycUjO1a-FiPHz27ij-FJ/exec'
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById('msg');
 
-<!-- Mobile optimization-->
-<script>
-  const toggleBtn = document.querySelector('.nav-toggle');
-  const navList  = document.querySelector('nav ul');
-  if (toggleBtn && navList){
-    toggleBtn.addEventListener('click', () => {
-      const open = navList.classList.toggle('is-open');
-      toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Honeypot (optional)
+      const hp = form.querySelector('input[name="website"]');
+      if (hp && hp.value) return;
+
+      try {
+        const resp = await fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+
+        // If CORS is good, try JSON; otherwise fall back to text.
+        let data = null;
+        try { data = await resp.json(); } catch { /* ignore */ }
+
+        if (resp.ok && (!data || data.status === 'success')) {
+          msg.textContent = 'Message sent successfully!';
+          form.reset();
+        } else {
+          msg.textContent = 'Submission error. Please try again.';
+        }
+      } catch (err) {
+        // Only shows if the network truly failed (CORS blocked/URL wrong/offline)
+        msg.textContent = 'Network error. Please try again.';
+      } finally {
+        setTimeout(() => { msg.textContent = ''; }, 5000);
+      }
     });
-  }
-</script>
+  </script>
 
-<script>
-  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
-  const vanta = VANTA.NET({
-    el: "#vanta-bg",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    scaleMobile: 1.00,
-    color: 0xb3ff,
-    backgroundColor: 0x0,
-    points: isMobile ? 6 : 10,
-    maxDistance: isMobile ? 15 : 20,
-    spacing: isMobile ? 18 : 15,
-    showDots: true
-  });
+  <!-- Mobile optimization-->
+  <script>
+    const toggleBtn = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('nav ul');
+    if (toggleBtn && navList) {
+      toggleBtn.addEventListener('click', () => {
+        const open = navList.classList.toggle('is-open');
+        toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  </script>
 
-  /* limit the animated area on mobile */
-  if (isMobile) {
-    const v = document.getElementById('vanta-bg');
-    v.style.height = '60vh';     // only animate top portion
-  }
-</script>
+  <script>
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    const vanta = VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0xb3ff,
+      backgroundColor: 0x0,
+      points: isMobile ? 6 : 10,
+      maxDistance: isMobile ? 15 : 20,
+      spacing: isMobile ? 18 : 15,
+      showDots: true
+    });
+
+    /* limit the animated area on mobile */
+    if (isMobile) {
+      const v = document.getElementById('vanta-bg');
+      v.style.height = '60vh';     // only animate top portion
+    }
+  </script>
 </body>
+
 </html>
