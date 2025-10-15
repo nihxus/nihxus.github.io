@@ -239,6 +239,8 @@
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
+                  <!-- Invisible anti-spam honeypot field -->
+                    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
@@ -267,16 +269,32 @@
 </script>
 
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzyZqdTdVnm9qICGwypt2Qa2G0qhbyFfIu-2nrqC9kghxtGYmJx1oJdTNElfo2cALiR/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx9acdaRNcr300nBUc53S4kWr0iur6YYG0ZhdyPtXWLgAkLycUjO1a-FiPHz27ij-FJ/exec'
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById("msg")
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {msg.innerHTML = "Message sent successfully!"; setTimeout(function(){msg.innerHTML = ""}, 5000); form.reset()})
-      .catch(error => console.error('Error!', error.message))
-  })
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Honeypot (anti-spam)
+    const honeypot = form.querySelector('input[name="website"]');
+    if (honeypot && honeypot.value) return;
+
+    try {
+      const resp = await fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+      const data = await resp.json().catch(() => ({}));
+      if (resp.ok && data.status === 'success') {
+        msg.innerHTML = "Message sent successfully!";
+        form.reset();
+      } else {
+        msg.innerHTML = "Submission error. Please try again.";
+      }
+      setTimeout(() => msg.innerHTML = "", 5000);
+    } catch (err) {
+      msg.innerHTML = "Network error. Please try again.";
+      setTimeout(() => msg.innerHTML = "", 5000);
+    }
+  });
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
