@@ -1,7 +1,10 @@
+/* =========================================================
+   BASE / RESET
+   ========================================================= */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Titillium Web', 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
@@ -14,45 +17,48 @@ body {
     color: #fff;
 }
 
-#header {
-    width: 100%;
-    height: 60vh;
-    position: relative;
-    overflow: hidden;
-}
-
-#vanta-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-#header .container {
-    position: relative;
-    z-index: 1;
-}
-
-
+/* =========================================================
+     LAYOUT CONTAINER
+     ========================================================= */
 .container {
     padding: 10px 10%;
 }
 
+/* Fluid container padding var for responsive tweaks */
+:root {
+    --container-pad: clamp(12px, 4vw, 10%);
+}
+
+/* Override container padding to use CSS var */
+.container {
+    padding: 10px var(--container-pad);
+}
+
+/* =========================================================
+     NAV (FIXED TOP + LAYOUT)
+     ========================================================= */
 nav {
+    position: fixed;
+    /* keep navbar fixed on all pages */
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.logo {
-    width: 250px;
+    /* base layout */
+    gap: 16px;
+    /* responsive spacing */
+    padding: 16px var(--container-pad);
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
 }
 
 nav ul {
     margin-left: auto;
+    display: flex;
+    gap: clamp(12px, 2.5vw, 24px);
 }
 
 nav ul li {
@@ -83,6 +89,62 @@ nav ul li a:hover::after {
     transition: 0.5s;
 }
 
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Mobile dropdown attaches below fixed nav */
+@media (max-width:768px) {
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 64px;
+        background: rgba(0, 0, 0, 0.95);
+        border-left: 1px solid rgba(255, 255, 255, .08);
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+        padding: 14px 18px;
+        flex-direction: column;
+        gap: 12px;
+        transform: translateY(-12px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .2s ease, transform .2s ease;
+        z-index: 20;
+    }
+
+    nav ul.is-open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* =========================================================
+     HEADER (HOME HERO AREA)
+     ========================================================= */
+#header {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    /* space under fixed nav */
+}
+
+#header .container {
+    position: relative;
+    z-index: 1;
+}
+
 .header-content {
     margin-top: 10%;
     padding-left: 20px;
@@ -98,7 +160,62 @@ nav ul li a:hover::after {
     color: #00d539;
 }
 
-/* ---------------about--------------- */
+/* Responsive header sizing */
+@media (max-width:1024px) {
+    #header {
+        height: 70vh;
+    }
+}
+
+@media (max-width:768px) {
+    #header {
+        height: 60vh;
+    }
+}
+
+@media (max-width:480px) {
+    .header-content {
+        margin-top: 24px;
+        padding-left: 0;
+        font-size: clamp(14px, 2.4vw, 20px);
+    }
+
+    .header-content h1 {
+        font-size: clamp(28px, 6vw, 55px);
+    }
+}
+
+/* =========================================================
+     VANTA BACKGROUNDS
+     (Note: Home uses #vanta-header inside #header;
+            Blog/Library use full-page #vanta-bg)
+     ========================================================= */
+/* Full-page Vanta (Blog + Library) */
+#vanta-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Header-only Vanta (Home hero) */
+#vanta-header {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Give page content breathing room below fixed nav on non-hero layouts */
+main.container {
+    padding-top: 90px;
+}
+
+/* =========================================================
+     ABOUT SECTION
+     ========================================================= */
 #about {
     padding: 80px 0;
     color: #ababab;
@@ -107,6 +224,7 @@ nav ul li a:hover::after {
 .row {
     display: flex;
     justify-content: space-between;
+    gap: 24px;
     flex-wrap: wrap;
 }
 
@@ -117,6 +235,7 @@ nav ul li a:hover::after {
 .about-col-1 img {
     width: 100%;
     border-radius: 15px;
+    display: block;
 }
 
 .about-col-2 {
@@ -129,10 +248,11 @@ nav ul li a:hover::after {
     color: #fff;
 }
 
+/* Tabs header */
 .tab-titles {
     display: flex;
-    margin-top: 20px 0 40px;
-    ;
+    margin: 20px 0 40px;
+    /* fixed invalid margin-top usage */
 }
 
 .tab-links {
@@ -158,6 +278,15 @@ nav ul li a:hover::after {
     width: 50%;
 }
 
+/* Tab contents (lists) */
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
 .tab-contents ul li {
     list-style: none;
     margin: 10px 0;
@@ -168,15 +297,29 @@ nav ul li a:hover::after {
     font-size: 14px
 }
 
-.tab-contents {
-    display: none;
-}
-
-.tab-contents.active-tab {
+/* About image sizing and desktop column lock */
+.about-col-1 img {
+    width: clamp(180px, 28vw, 340px);
+    height: auto;
+    border-radius: 15px;
     display: block;
 }
 
-/* ---------------services--------------- */
+@media (min-width: 992px) {
+    .about-col-1 {
+        flex: 0 0 360px;
+        max-width: 360px;
+        align-self: flex-start;
+    }
+
+    .about-col-2 {
+        flex: 1;
+    }
+}
+
+/* =========================================================
+     SERVICES
+     ========================================================= */
 #services {
     padding: 30px 0;
 }
@@ -184,7 +327,8 @@ nav ul li a:hover::after {
 .services-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    gap: 40px;
+    /* normalized from grid-gap */
     margin-top: 50px;
 }
 
@@ -221,7 +365,9 @@ nav ul li a:hover::after {
     transform: translateY(-10px);
 }
 
-/* ---------------portfolio--------------- */
+/* =========================================================
+     PORTFOLIO
+     ========================================================= */
 #portfolio {
     padding: 50px 0;
 }
@@ -229,7 +375,8 @@ nav ul li a:hover::after {
 .work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    gap: 40px;
+    /* normalized from grid-gap */
     margin-top: 50px;
 }
 
@@ -291,6 +438,9 @@ nav ul li a:hover::after {
     height: 100%;
 }
 
+/* =========================================================
+     BUTTONS
+     ========================================================= */
 .btn {
     display: block;
     margin: 50px auto;
@@ -307,7 +457,15 @@ nav ul li a:hover::after {
     background: #00d539;
 }
 
-/* ---------------contact--------------- */
+/* Buttons tap size (acc essibility) */
+.btn,
+.btn.btn2 {
+    min-height: 44px;
+}
+
+/* =========================================================
+     CONTACT
+     ========================================================= */
 .contact-left {
     flex-basis: 35%;
 }
@@ -379,144 +537,23 @@ form .btn2 {
     display: block;
 }
 
-/* ---------------Mobile--------------- */
-/* Base tweaks */
-:root {
-    --container-pad: clamp(12px, 4vw, 10%);
-}
-
-.container {
-    padding: 10px var(--container-pad);
-}
-
-/* Fluid type */
-.header-content h1 {
-    font-size: clamp(28px, 6vw, 55px);
-}
-
-.header-content {
-    font-size: clamp(14px, 2.4vw, 20px);
-    margin-top: clamp(24px, 8vh, 10%);
-}
-
-/* Nav layout */
-nav {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 16px var(--container-pad);
-}
-
-nav ul {
-    display: flex;
-    gap: clamp(12px, 2.5vw, 24px);
-    margin-left: auto;
-}
-
-.nav-toggle {
-    display: none;
-    background: transparent;
-    border: 0;
-    color: #fff;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* Images & grids */
+/* =========================================================
+     GLOBAL MEDIA / ACCESSIBILITY
+     ========================================================= */
 img {
     max-width: 100%;
     height: auto;
 }
 
-.services-list,
-.work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-}
-
-/* About columns */
-.row {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    flex-wrap: wrap;
-}
-
-.about-col-1,
-.about-col-2 {
-    flex: 1 1 420px;
-}
-
-/* Buttons tap size */
-.btn,
-.btn.btn2 {
-    min-height: 44px;
-}
-
-/* --- Breakpoints --- */
-
-/* ≤ 1024px: slightly smaller header area */
-@media (max-width:1024px) {
-    #header {
-        height: 70vh;
-    }
-}
-
-/* ≤ 768px: hamburger, stacked layout, larger tap targets */
-@media (max-width:768px) {
-
-    /* Header height */
-    #header {
-        height: 60vh;
-    }
-
-    /* Nav → hamburger */
-    .nav-toggle {
-        display: block;
-    }
-
-    nav ul {
-        position: absolute;
-        right: 0;
-        top: 64px;
-        /* below nav bar */
-        background: rgba(0, 0, 0, 0.85);
-        border-left: 1px solid rgba(255, 255, 255, .08);
-        border-bottom: 1px solid rgba(255, 255, 255, .08);
-        padding: 14px 18px;
-        flex-direction: column;
-        gap: 12px;
-        transform: translateY(-12px);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity .2s ease, transform .2s ease;
-        z-index: 20;
-    }
-
-    nav ul.is-open {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .about-col-1,
-    .about-col-2 {
-        flex-basis: 100%;
-    }
-
-    .tab-links {
-        margin: 16px 24px 0 0;
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
     }
 }
 
 /* ≤ 480px: compact spacing */
 @media (max-width:480px) {
-    .header-content {
-        margin-top: 24px;
-        padding-left: 0;
-    }
-
     .sub-title {
         font-size: 40px;
     }
@@ -531,35 +568,244 @@ img {
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none !important;
-        transition: none !important;
-    }
+/* =========================================================
+     NON-HOME PAGES (NO HERO)
+     ========================================================= */
+.no-hero #header {
+    height: auto;
+    /* remove 60vh gap */
+    min-height: unset;
+    background: transparent;
 }
 
-/* Make the "About me" photo scale nicely on all screens */
-.about-col-1 img {
-    width: clamp(180px, 28vw, 340px);
-    /* min, preferred, max */
-    height: auto;
-    border-radius: 15px;
-    /* keep style */
+.no-hero main.container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Links */
+a,
+a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    color: #00d539;
+}
+
+/* =========================================================
+     BLOG LIST + LIBRARY CARDS
+     ========================================================= */
+/* Blog list */
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem;
+}
+
+.post-list li {
+    margin: 0 0 1rem;
+    line-height: 1.5;
+}
+
+.post-list a {
+    font-weight: 600;
+}
+
+/* Library grid/cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: .5rem;
+    background: #262626;
+    border-radius: .75rem;
+    padding: .75rem;
+    transition: transform .15s ease, box-shadow .15s ease;
+    color: inherit;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: .5rem;
     display: block;
 }
 
-/* On laptops/desktops, keep the image column from stretching too wide */
-@media (min-width: 992px) {
-    .about-col-1 {
-        flex: 0 0 360px;
-        /* lock a comfortable column width */
-        max-width: 360px;
-        align-self: flex-start;
-        /* avoid awkward vertical stretching */
+@media (max-width: 480px) {
+    .card img {
+        height: 240px;
     }
+}
 
-    .about-col-2 {
-        flex: 1;
-        /* let the text take the remaining space */
+.muted {
+    color: #8a8a8a;
+    font-size: .9rem;
+}
+
+.hero,
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: .5rem;
+    display: block;
+}
+
+.lib-heading {
+    margin: 2.5rem 0 1rem;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    border-left: 4px solid #00d539;
+    padding-left: 10px;
+}
+
+/* === Post bubble over Vanta (Blog only) === */
+.post {
+    /* size & centering */
+    max-width: 900px;
+    margin: 1.5rem auto 3rem;
+    padding: 1.25rem 1.5rem;
+
+    /* bubble look */
+    background: rgba(255, 255, 255, 0.06);
+    /* translucent gray */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    backdrop-filter: blur(4px);
+    /* frosted vibe */
+}
+
+/* keep body text readable inside the bubble */
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.75;
+}
+
+/* tidy up spacing for header/meta and images inside the bubble */
+.post header {
+    margin-bottom: 1rem;
+}
+
+.post .meta {
+    color: #8a8a8a;
+    font-size: .95rem;
+}
+
+.post .hero {
+    border-radius: 12px;
+    margin: .75rem 0 1.25rem;
+    display: block;
+}
+
+/* mobile: tighter padding */
+@media (max-width: 768px) {
+    .post {
+        padding: 1rem 1rem;
+    }
+}
+
+/* =========================================================
+     READABILITY (BLOG ONLY)
+     ========================================================= */
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.75;
+    text-align: left;
+}
+
+.post h1,
+.post img.hero {
+    max-width: 100%;
+}
+
+/* --- Blog index enhancements --- */
+.blog-tagline {
+    color: #8a8a8a;
+    font-size: 1.1rem;
+    margin: 0 0 1.75rem;
+}
+
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+.post-card {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin: 0 0 1.25rem;
+    transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transform: translateY(14px);
+    animation: fadeUp .5s ease forwards;
+}
+
+.post-card:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.post-card:nth-child(2) {
+    animation-delay: .1s;
+}
+
+.post-card:nth-child(3) {
+    animation-delay: .15s;
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, .07);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+.post-card a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.post-title {
+    margin: 0 0 .35rem;
+    font-weight: 600;
+    color: #00d9ff;
+}
+
+.post-card .meta {
+    margin: 0 0 .5rem;
+    color: #8a8a8a;
+    font-size: .95rem;
+}
+
+.post-card .excerpt {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* entrance animation */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

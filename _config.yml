@@ -1,0 +1,27 @@
+title: Antonio Rosado - Portfolio
+url: "https://nihxus.github.io"
+baseurl: "" # user site, keep empty
+
+# custom 'books' collection
+collections:
+  books:
+    output: true
+
+# Default layouts per collection
+defaults:
+- scope: { path: "", type: "books" }
+  values: { layout: book }
+
+# Defaults for posts
+defaults:
+  - scope: { type: posts }
+    values: { vanta: full }
+
+
+# enable keyboard formatting
+markdown: kramdown
+kramdown:
+  hard_wraps: true
+
+
+timezone: America/New_York

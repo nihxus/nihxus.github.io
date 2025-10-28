@@ -1,76 +1,102 @@
-# 🌐 Antonio Rosado — Portfolio
+<!-- 🌐 Antonio Rosado — Portfolio -->
+<div align="center">
+  
+# 🌐 **Antonio Rosado**  
+### Full-Stack Developer · Cybersecurity · Cloud Automation  
+[![Website](https://img.shields.io/badge/🌎%20Portfolio-nihxus.github.io-00d539?style=for-the-badge)](https://nihxus.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-antonio--rosado-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/antonio-rosado-75600a202/)
+[![GitHub](https://img.shields.io/badge/GitHub-nihxus-181717?style=for-the-badge&logo=github)](https://github.com/nihxus)
 
-Welcome to my personal portfolio!  
-This site showcases my projects, technical experience, and skill set as a **Full-Stack Developer** and **Cybersecurity professional** passionate about automation, backend systems, and cloud infrastructure.
+</div>
 
-👉 **Live Site:** [https://nihxus.github.io](https://nihxus.github.io)
+---
+
+## 🧭 Overview
+
+A fully responsive, **Jekyll-powered portfolio and blog** featuring:
+- ⚙️ **Full-Stack projects** and DevOps automation work  
+- ✍️ A **personal blog** for devlogs, book notes, and experiments  
+- 📚 A categorized **Library** of books on theory, languages, methodologies, and more
+- 💾 Hosted via **GitHub Pages**
 
 ---
 
 ## 🧑‍💻 About Me
-I'm **Antonio Rosado**, a developer from New Jersey with a background in **software engineering, DevOps, and cybersecurity**.  
-I enjoy building secure, efficient applications that solve real-world problems — from backend architecture to user-focused interfaces.
+
+I'm **Antonio Rosado**, a developer passionate about automation, backend systems, and cloud infrastructure.  
+I build **secure, efficient software** that blends backend logic, DevOps, and cybersecurity principles.
 
 Currently:
-- 💼 **Software Tester** at the **Federal Aviation Administration (FAA)**
-- 🎓 B.S. in Computer Science, **Rowan University** (Minor: Cybersecurity)
-- 🧰 Experienced with **Python, Flask, React, AWS, and DevOps pipelines**
+- 💼 **Computer Scientist** — *Federal Aviation Administration (FAA)*  
+- 🎓 **B.S. Computer Science** — *Rowan University* (Minor: Cybersecurity)  
+- 🧰 Skilled in **Python, Flask, React, AWS, and CI/CD pipelines**
 
 ---
 
-## 🚀 Projects
+## 🚀 Featured Projects
 
 | Project | Description | Stack | Link |
 |----------|--------------|-------|------|
-| **NPM Dependency Inspector** | React + TypeScript app that visualizes NPM package metadata including dependencies, version, license, and download trends. | React, TypeScript, Vite, NPM API | [GitHub ↗](https://github.com/nihxus/npm-dependency-inspector) |
-| **Osteopathy Certification App** | Full-stack Flask app used by Rowan OMM Dept to automate student certification access and reports for 200+ medical students. | Python, Flask, SQLAlchemy, AWS | [GitHub ↗](https://github.com/nihxus/OMMProject-main) |
-| **Stock Disclosure Monitor** | Flask backend that tracks 50K+ U.S. Congressional trades using data pipelines and dashboard analytics. | Python, Flask, REST API, SQL | [GitHub ↗](https://github.com/nihxus/Owlgorithmic-Traders) |
+| 🧩 **NPM Dependency Inspector** | React + TypeScript app visualizing NPM package metadata and dependency networks. | React, TypeScript, Vite, NPM API | [GitHub ↗](https://github.com/nihxus/npm-dependency-inspector) |
+| 💡 **Osteopathy Certification App** | Flask app automating certification for 200+ medical students at Rowan OMM Dept. | Python, Flask, SQLAlchemy, AWS | [GitHub ↗](https://github.com/nihxus/OMMProject-main) |
+| 📊 **Stock Disclosure Monitor** | Backend for automated monitoring of 50K+ U.S. Congressional trades with live dashboards. | Python, Flask, REST API, SQL | [GitHub ↗](https://github.com/nihxus/Owlgorithmic-Traders) |
 
 ---
 
-## 🧠 Skills
+## 🧠 Site Sections
 
-**Languages:** Python, Java, Rust, Go, C, C++, JavaScript, SQL, Bash, PowerShell  
-**Frameworks:** Flask, Django, React, Bootstrap, Node.js  
-**Cloud & DevOps:** AWS (EC2, RDS, S3), Docker, CI/CD, Automation Pipelines  
-**Cybersecurity:** Wireshark, Kali Linux, pfSense, Cisco, Threat Detection, Endpoint Hardening  
-**Databases:** MySQL, PostgreSQL, MongoDB  
-**Concepts:** SDLC, Agile/Scrum, Secure Coding, Network Defense  
-
----
-
-## 🏢 Experience
-
-- **Software Tester — FAA (2025–Present)**  
-  Validating and documenting testing for internal FAA software modules, ensuring compliance and reliability.
-
-- **Cybersecurity Contractor — Emerald Lock Consulting (2025-Present)**  
-  Automated cross-platform log analysis and detection workflows using Python, Bash, and PowerShell.
-
-- **Full-Stack Developer — Intentional Interventions (2024–2025)**  
-  Built RESTful APIs and Flask frontends with AWS integration; improved healthcare data synchronization by 35%.
-
-- **Data Analyst Intern — Intel Corporation (2023–2024)**  
-  Automated ETL pipelines and developed Tableau dashboards reducing manual reporting by 20+ hours monthly.
+| Section | Description |
+|----------|--------------|
+| 🏠 **Home** | Portfolio overview with skills, projects, and contact links |
+| ✍️ **Blog** | Devlog with experiments, notes, and project write-ups |
+| 📚 **Library** | Curated reading list categorized by Theory, Languages, and Methodologies |
+| 🧩 **Projects** | Live GitHub links to repositories and open-source contributions |
 
 ---
 
-## 🧩 Education
 
-**B.S. Computer Science**, Rowan University — *Minor: Cybersecurity*  
+## ⚙️ Tech Stack
 
-**Relevant Coursework:**  
-Software Engineering I · Cybersecurity Principles · Database Systems · Computer Networks · Data Structures ·  
-Algorithms · Operating Systems · Web & Text Mining · Embedded Systems Programming
+| Component | Technology Used | Purpose |
+|------------|----------------|----------|
+| **Framework** | [Jekyll](https://jekyllrb.com/) | Static site generation |
+| **Styling** | Custom CSS | Responsive layout, grid system, typography |
+| **Animation** | [Vanta.js (NET)](https://www.vantajs.com/?effect=net) + [Three.js](https://threejs.org/) | Dynamic animated backgrounds |
+| **Hosting** | [GitHub Pages](https://pages.github.com/) | Continuous deployment and free hosting |
+| **Templating** | Liquid | Includes, layouts, and dynamic post rendering |
+| **Typography** | [Titillium Web](https://fonts.google.com/specimen/Titillium+Web) | Futuristic and readable sans-serif |
+| **Icons** | [Font Awesome](https://fontawesome.com/) | Navigation and service section icons |
+| **Forms** | Google Apps Script endpoint | Handles form submission and email delivery |
+| **Version Control** | Git + GitHub | Repo management and CI integration |
 
 ---
 
-## ⚙️ Local Development
+## 🏗️ Local Development
 
 ```bash
-# Clone the repository
+# Clone repository
 git clone https://github.com/nihxus/nihxus.github.io.git
 cd nihxus.github.io
 
-# Open in your browser
-# (No build step required — plain HTML/CSS/JS)
+# Serve locally with Jekyll
+bundle exec jekyll serve
+
+# Visit:
+# http://localhost:4000
+````
+
+---
+
+## 🎨 Design Notes
+
+* Font: [Titillium Web](https://fonts.google.com/specimen/Titillium+Web)
+* Animated Background: [Vanta.js (NET)](https://www.vantajs.com/)
+* Hosting: [GitHub Pages](https://pages.github.com/)
+* Icons: [Font Awesome](https://fontawesome.com)
+
+---
+
+<div align="center">
+© 2025 [Antonio Rosado](https://nihxus.github.io)
+
+</div>

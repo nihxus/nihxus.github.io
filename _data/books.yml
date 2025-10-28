@@ -1,0 +1,187 @@
+# _data/books.yml
+- title: Impatient Perl
+  author: Greg London
+  category: languages
+  cover: https://m.media-amazon.com/images/I/61uCKCpYYQL._UF1000,1000_QL80_.jpg
+  link: https://www.perl.org/books/impatient-perl/
+  rating: 8
+  excerpt: Ownership, lifetimes, fearless concurrency.
+
+- title: Introduction to The Design and Analysis of Algorithms
+  author: Anany Levitin
+  category: theory
+  cover: https://m.media-amazon.com/images/I/51l50MpZGBL._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Introduction-Design-Analysis-Algorithms-3rd/dp/0132316811 
+  rating: 9
+  excerpt: programming logic, algorithms, Java
+
+- title: Deep Learning
+  author: John D. Kelleher
+  category: theory
+  cover: https://m.media-amazon.com/images/I/61+NtYUWq4L._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Deep-Learning-Press-Essential-Knowledge/dp/0262537559
+  rating: 10
+  excerpt: Machine learning, artificial intelligence, algorithms
+
+- title: Structure and Interpretation of Computer Programs
+  author: Harold Abelson, Gerald Jay Sussman w/ Julie Sussman
+  category: theory
+  cover: https://m.media-amazon.com/images/I/71BBXQnykuL._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871
+  rating: 10
+  excerpt: programming logic, algorithms, data structures
+
+- title: Assembly Language Step by Step (Programming with Linux)
+  author: Jeff Duntemann
+  category: languages
+  cover: https://media.wiley.com/product_data/coverImage300/47/13941552/1394155247.jpg
+  link: https://www.wiley.com/en-gb/x64+Assembly+Language+Step-by-Step%3A+Programming+with+Linux%2C+4th+Edition-p-9781394155255 
+  rating: 10
+  excerpt: programming logic, computer architecture, programming languages
+
+- title: Practical Vim
+  author: Drew Neil
+  category: software
+  cover: https://pragprog.com/titles/dnvim2/practical-vim-second-edition/dnvim2.jpg
+  link: https://www.amazon.com/Practical-Vim-Edit-Speed-Thought/dp/1680501275
+  rating: 9
+  excerpt: software, operating systems, shell tools, scripting
+
+- title: Programming in Prolog
+  author: William F. Clocksin & Christopher S. Mellish
+  category: languages
+  cover: https://m.media-amazon.com/images/I/61Ew0BchW2L._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Programming-Prolog-Using-ISO-Standard/dp/3540006788
+  rating: 7.5
+  excerpt: programming languages, prolog
+
+- title: Go Programming Language for Dummies
+  author: Wei-Meng Lee
+  category: languages
+  cover: https://m.media-amazon.com/images/I/81uPalCo-2L._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Programming-Language-Dummies-Computer-Tech/dp/1119786193
+  rating: 8
+  excerpt: programming languages, GoLang
+ 
+- title: The Standard C Library
+  author: P.J. Plaucer
+  category: languages
+  cover: https://m.media-amazon.com/images/I/81Kt7ZESdsL._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Standard-Library-P-J-Plauger/dp/0138380120
+  rating: 9
+  excerpt: programming languages, C, libraries 
+
+- title: The C Programming Language
+  author: Brian W. Kernighan & Dennis M. Ritchie
+  category: languages
+  cover: https://m.media-amazon.com/images/I/51EyaJeebHL._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Programming-Language-2nd-Brian-Kernighan/dp/0131103628
+  rating: 10
+  excerpt: programming languages, C 
+
+- title: Introduction to Algorithms
+  author: Various
+  category: theory
+  cover: https://m.media-amazon.com/images/I/61Mw06x2XcL._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X
+  rating: 10
+  excerpt: algorithms, logic, data structures, analysis, mathematics
+
+- title: Principles of Computer Security
+  author: W.M. Arthur Conklin, PhD & Greg White PhD
+  category: studying
+  cover: https://m.media-amazon.com/images/I/610+6El-H6L._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Principles-Computer-Security-CompTIA-Beyond/dp/1260026019
+  rating: 8
+  excerpt: programming languages, GoLang
+
+
+- title: Applied Discrete Structures
+  author: Al Doerr & Ken Levasseur
+  category: theory
+  cover: https://m.media-amazon.com/images/I/51K-RtqxI6L._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Applied-Discrete-Structures-Ken-Levasseur/dp/1105559297
+  rating: 10
+  excerpt: discrete mathematics, mathematics, programming theory
+
+
+- title: Discrete Structures, Logic, and Computability
+  author: James L. Hein
+  category: theory
+  cover: https://m.media-amazon.com/images/I/71XfaqjKswL._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Discrete-Structures-Logic-Computability-James/dp/0763772062
+  rating: 7
+  excerpt: discrete mathematics, logic, programming theory, data structures
+
+
+- title: Language, Proof, and Logic
+  author: Dave Barker-Plummer, Jon Barwise, & John Etchemendy
+  category: theory
+  cover: https://m.media-amazon.com/images/I/71uBf9yeOZL._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Language-Proof-Logic-David-Barker-Plummer/dp/1575866323
+  rating: 8
+  excerpt: logic, rationality, artifical languages
+
+- title: Programming with GNU Software
+  author: Mike Loukides & Andy Oram
+  category: software
+  cover: https://m.media-amazon.com/images/I/71YdNOOpgrL._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Programming-GNU-Software-Nutshell-Handbooks/dp/1565921127
+  rating: 9
+  excerpt: software, scripting, shell tools, operating systems 
+
+- title: Unix In A Nutshell
+  author: Arnold Robbins
+  category: software
+  cover: https://m.media-amazon.com/images/I/91uItX3xX6L._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Unix-Nutshell-Fourth-Arnold-Robbins/dp/0596100299/ref=sr_1_1?crid=117AJTQ11X9M2&dib=eyJ2IjoiMSJ9.aICzLqG32w4zL4GQMcNai52ceMLkCjyWGoOmhO805XnD8_Gi-XCw2bZy7zPCZoJgWQkrC0RXwxfEG38M2xw1G6kwc5XV8Rc7TI501Xd6v7HglylEW_vUZJBst9I_BqdKVuEzveyaQwtc6sLZ89uz_h9mcB6-snzdoC9wbinrGnTgJ9nkNBBvgzg2ad6314F5Hz9bOA9oMD53pIkeN2rIo9rmDVT1eu_VrDBrhtNUDP8.BYDnPkdWApKM7RbbsJ3yOeQBGXLz58F5hGTfSsGkJXU&dib_tag=se&keywords=unix+in+a+nutshell&qid=1761521580&sprefix=unix+in+a+n%2Caps%2C80&sr=8-1
+  rating: 10
+  excerpt: software, scripting, shell tools, operating systems
+
+- title: Core Java SE 9 for the Impatient
+  author: Cay S. Horstmann
+  category: languages
+  cover: https://m.media-amazon.com/images/I/71ePGJ65eRL._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Core-Java-SE-9-Impatient/dp/0134694724
+  rating: 10
+  excerpt: algorithms, data structures, object oriented programming, java
+
+- title: Objects First With Java
+  author: David J. Barnes & Michael Kolling
+  category: languages
+  cover: https://m.media-amazon.com/images/I/51OHo4W+7KL._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Objects-First-Java-Practical-Introduction/dp/0134477367
+  rating: 10
+  excerpt: algorithms, data structures, object oriented programming, java
+
+- title: Data Abstraction & Problem Solving with JAVA
+  author: Janet J. Prichard & Frank M. Carrano
+  category: languages
+  cover: https://pictures.abebooks.com/isbn/9780273751205-us.jpg
+  link: https://www.pearson.com/en-us/subject-catalog/p/data-abstraction-and-problem-solving-with-java-walls-and-mirrors/P200000003405/9780132122306?srsltid=AfmBOooiud7ovk03iRMCU1YwMo1605xLynuME_yqbOR1FZaDfkXyPKu6
+  rating: 10
+  excerpt: algorithms, data structures, java
+
+- title: Computer Organization and Design
+  author: David A. Patterson & John L. Hennessy
+  category: theory
+  cover: https://redshelf-images.s3-external-1.amazonaws.com/cover_image/9780080922812.jpg
+  link: https://redshelf.com/app/ecom/book/281556/computer-organization-and-design-281556-9780080922812-david-a-patterson-john-l-hennessy
+  rating: 5
+  excerpt: computer architecture, assembly language
+
+- title: Harvard Business Review Guide for Emotional Intelligence
+  author: Harvard Business Review
+  category: methodologies
+  cover: https://m.media-amazon.com/images/I/7184cO94aEL._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/HBR-Guide-Emotional-Intelligence/dp/1633692728 
+  rating: 10
+  excerpt: business guides, psychology
+
+- title: Scrum
+  author: Jeff Sutherland & J.J. Sutherland
+  category: methodologies
+  cover: https://m.media-amazon.com/images/I/71FvcrGqxHL._AC_UF1000,1000_QL80_.jpg
+  link: https://www.amazon.com/Scrum-Doing-Twice-Work-Half/dp/038534645X
+  rating: 10
+  excerpt: agile, business, psychology, project management
