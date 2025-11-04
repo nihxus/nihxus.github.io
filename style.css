@@ -20,9 +20,6 @@ body {
 /* =========================================================
      LAYOUT CONTAINER
      ========================================================= */
-.container {
-    padding: 10px 10%;
-}
 
 /* Fluid container padding var for responsive tweaks */
 :root {
@@ -127,6 +124,111 @@ nav ul li a:hover::after {
         display: block;
     }
 }
+
+/* About section: photo left, text right */
+#about .row {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .about-col-1 {
+    flex: 0 0 auto;
+    margin-right: 2rem;
+  }
+  
+  .about-col-2 {
+    flex: 1;
+    min-width: 300px;
+  }
+
+/* ---------- Mobile polish for landing page (≤768px) ---------- */
+@media (max-width: 768px) {
+
+    /* make page padding even on mobile */
+    .container {
+      padding: 0 1.25rem;
+    }
+  
+    /* Hero text */
+    .header-content {
+      margin-top: 24px;
+      text-align: center;
+      padding: 0;              /* we already set container padding above */
+    }
+    .header-content p {
+      margin-bottom: 8px;
+    }
+    .header-content h1 {
+      margin-top: 8px;
+    }
+  
+    /* About */
+    #about .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .about-col-1 img {
+      display: block;
+      margin: 0 auto 1.5rem;
+    }
+    .about-col-2 {
+      width: 100%;
+      max-width: 540px;        /* ↓ smaller than 680 so it doesn't look off-center */
+      margin: 0 auto;
+    }
+  
+    /* Keep tabs (skills / experience / education) behavior the same */
+    .tab-titles {
+      justify-content: space-between;
+    }
+  
+    /* Section titles centered */
+    #services .sub-title,
+    #portfolio .sub-title,
+    #contact .sub-title {
+      text-align: center;
+    }
+  
+    /* Services: 1-col */
+    .services-list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .services-list div {
+      max-width: 540px;
+      margin: 0 auto;
+      border-radius: 14px;
+    }
+  
+    /* Projects: 1-col */
+    .work-list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .work {
+      max-width: 540px;
+      margin: 0 auto;
+    }
+  
+    /* Buttons centered */
+    .btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    /* Contact stacked */
+    .contact-left,
+    .contact-right {
+      flex-basis: 100%;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+    }
+  }  
 
 /* =========================================================
      HEADER (HOME HERO AREA)
@@ -457,7 +559,7 @@ main.container {
     background: #00d539;
 }
 
-/* Buttons tap size (acc essibility) */
+/* Buttons tap size (accessibility) */
 .btn,
 .btn.btn2 {
     min-height: 44px;
@@ -598,12 +700,6 @@ a:focus-visible {
 /* =========================================================
      BLOG LIST + LIBRARY CARDS
      ========================================================= */
-/* Blog list */
-.post-list {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0 2rem;
-}
 
 .post-list li {
     margin: 0 0 1rem;
@@ -688,13 +784,6 @@ a:focus-visible {
     box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
     backdrop-filter: blur(4px);
     /* frosted vibe */
-}
-
-/* keep body text readable inside the bubble */
-.post-content {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.75;
 }
 
 /* tidy up spacing for header/meta and images inside the bubble */
@@ -809,3 +898,59 @@ a:focus-visible {
         transform: translateY(0);
     }
 }
+
+/* ===== Mobile contact layout ===== */
+@media (max-width: 768px) {
+    /* stack contact section */
+    #contact .row {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    /* FORM FIRST */
+    #contact .contact-right {
+      order: 1;
+      width: 100%;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+  
+    /* make the heading centered above the fields */
+    #contact .contact-right form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    /* INFO SECOND */
+    #contact .contact-left {
+      order: 2;
+      width: 100%;
+      max-width: 540px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    #contact .contact-left .social-icons {
+      justify-content: center;
+    }
+  
+    #contact .contact-left .btn.btn2 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  /* desktop / large screens: push contact info down a bit */
+@media (min-width: 769px) {
+    #contact .row {
+      align-items: flex-start;
+    }
+  
+    .contact-left {
+      margin-top: 11rem;   /* tweak this value until it lines up how you like */
+    }
+  }
+  
+  
