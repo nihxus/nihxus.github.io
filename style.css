@@ -130,105 +130,114 @@ nav ul li a:hover::after {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-  }
-  
-  .about-col-1 {
+}
+
+.about-col-1 {
     flex: 0 0 auto;
     margin-right: 2rem;
-  }
-  
-  .about-col-2 {
+}
+
+.about-col-2 {
     flex: 1;
     min-width: 300px;
-  }
+}
 
 /* ---------- Mobile polish for landing page (≤768px) ---------- */
 @media (max-width: 768px) {
 
     /* make page padding even on mobile */
     .container {
-      padding: 0 1.25rem;
+        padding: 0 1.25rem;
     }
-  
+
     /* Hero text */
     .header-content {
-      margin-top: 24px;
-      text-align: center;
-      padding: 0;              /* we already set container padding above */
+        margin-top: 24px;
+        text-align: center;
+        padding: 0;
+        /* we already set container padding above */
     }
+
     .header-content p {
-      margin-bottom: 8px;
+        margin-bottom: 8px;
     }
+
     .header-content h1 {
-      margin-top: 8px;
+        margin-top: 8px;
     }
-  
+
     /* About */
     #about .row {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
+
     .about-col-1 img {
-      display: block;
-      margin: 0 auto 1.5rem;
+        display: block;
+        margin: 0 auto 1.5rem;
     }
+
     .about-col-2 {
-      width: 100%;
-      max-width: 540px;        /* ↓ smaller than 680 so it doesn't look off-center */
-      margin: 0 auto;
+        width: 100%;
+        max-width: 540px;
+        /* ↓ smaller than 680 so it doesn't look off-center */
+        margin: 0 auto;
     }
-  
+
     /* Keep tabs (skills / experience / education) behavior the same */
     .tab-titles {
-      justify-content: space-between;
+        justify-content: space-between;
     }
-  
+
     /* Section titles centered */
     #services .sub-title,
     #portfolio .sub-title,
     #contact .sub-title {
-      text-align: center;
+        text-align: center;
     }
-  
+
     /* Services: 1-col */
     .services-list {
-      grid-template-columns: 1fr;
-      gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
+
     .services-list div {
-      max-width: 540px;
-      margin: 0 auto;
-      border-radius: 14px;
+        max-width: 540px;
+        margin: 0 auto;
+        border-radius: 14px;
     }
-  
+
     /* Projects: 1-col */
     .work-list {
-      grid-template-columns: 1fr;
-      gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
+
     .work {
-      max-width: 540px;
-      margin: 0 auto;
+        max-width: 540px;
+        margin: 0 auto;
     }
-  
+
     /* Buttons centered */
     .btn {
-      margin-left: auto;
-      margin-right: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
-  
+
     /* Contact stacked */
     .contact-left,
     .contact-right {
-      flex-basis: 100%;
-      max-width: 540px;
-      margin: 0 auto;
+        flex-basis: 100%;
+        max-width: 540px;
+        margin: 0 auto;
     }
+
     form input,
     form textarea {
-      width: 100%;
+        width: 100%;
     }
-  }  
+}
 
 /* =========================================================
      HEADER (HOME HERO AREA)
@@ -901,56 +910,102 @@ a:focus-visible {
 
 /* ===== Mobile contact layout ===== */
 @media (max-width: 768px) {
+
     /* stack contact section */
     #contact .row {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
-  
+
     /* FORM FIRST */
     #contact .contact-right {
-      order: 1;
-      width: 100%;
-      max-width: 540px;
-      margin: 0 auto;
+        order: 1;
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto;
     }
-  
+
     /* make the heading centered above the fields */
     #contact .contact-right form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
-  
+
     /* INFO SECOND */
     #contact .contact-left {
-      order: 2;
-      width: 100%;
-      max-width: 540px;
-      margin: 0 auto;
-      text-align: center;
+        order: 2;
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto;
+        text-align: center;
     }
-  
-    #contact .contact-left .social-icons {
-      justify-content: center;
-    }
-  
-    #contact .contact-left .btn.btn2 {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
 
-  /* desktop / large screens: push contact info down a bit */
+    #contact .contact-left .social-icons {
+        justify-content: center;
+    }
+
+    #contact .contact-left .btn.btn2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* desktop / large screens: push contact info down a bit */
 @media (min-width: 769px) {
     #contact .row {
-      align-items: flex-start;
+        align-items: flex-start;
     }
-  
+
     .contact-left {
-      margin-top: 11rem;   /* tweak this value until it lines up how you like */
+        margin-top: 11rem;
+        /* tweak this value until it lines up how you like */
     }
-  }
-  
-  
+}
+
+@media (max-width: 768px) {
+
+    /* keep page from getting wider than screen */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* row with Skills / Experience / Education */
+    .tab-titles {
+        justify-content: space-between;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    /* each tab was margin: 50px; – that's what made it wide */
+    .tab-links {
+        margin: 0;
+        font-size: 1rem;
+    }
+}
+
+/* desktop / large screens */
+@media (min-width: 992px) {
+    #about .row {
+        justify-content: flex-start;
+    }
+
+    /* photo stays ~360 */
+    .about-col-1 {
+        flex: 0 0 360px;
+        max-width: 360px;
+        margin-right: 2.5rem;
+    }
+
+    /* text column never gets wider than 720px */
+    .about-col-2 {
+        flex: 1 1 auto;
+        max-width: 720px;
+    }
+
+    /* cap the tab content so skills/experience text doesn't run super long */
+    .tab-contents {
+        max-width: 720px;
+    }
+}
